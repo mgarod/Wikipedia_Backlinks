@@ -1,10 +1,15 @@
-<?php
-/*	Usage:
-	php backlinkQuery.php (string) (int)
+/*
+	Author: Michael Garod
+	Date Created: Spring '15
+	Description: Given a Wikipedia page(argv[1]), the script will output to a CSV
+		all other pages that link back to the origin. The script will repeat
+		for each of those child pages, and the children's children, up to
+		$depthlimit(argv[2]) generations.
+	Usage: php backlinkQuery.php (string) (int)
 
-	string will be ORIGIN
-	int will be depthlimit
 */
+
+<?php
 // Bump up the memory a bit
 ini_set('memory_limit', '256M');
 
